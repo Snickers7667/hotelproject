@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Regisztráció – Prism Stays</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">PRISM STAYS</div>
+    <nav>
+        <a href="index.html">Főoldal</a>
+        <a href="login.html">Bejelentkezés</a>
+    </nav>
+</header>
+
+<section class="form-section">
+    <h2>Fiók létrehozása</h2>
+
+    <form id="registerForm">
+        <input type="text" id="regName" placeholder="Teljes név">
+        <input type="email" id="regEmail" placeholder="Email cím">
+        <input type="password" id="regPassword" placeholder="Jelszó (min. 6 karakter)">
+        <input type="password" id="regPassword2" placeholder="Jelszó megerősítése">
+        <button type="submit" class="btn">Regisztráció</button>
+        <p id="registerError" style="color:red;"></p>
+    </form>
+</section>
+
+<script src="register.js"></script>
+</body>
+</html>

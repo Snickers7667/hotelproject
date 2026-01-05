@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Foglalás</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">PRISM STAYS</div>
+    <nav>
+        <a href="index.html">Főoldal</a>
+        <a href="rooms.html">Szobák</a>
+        <a href="booking.html">Foglalás</a>
+        <a href="contact.html">Kapcsolat</a>
+        <a href="login.html">Bejelentkezés</a>
+    </nav>
+</header>
+
+<section class="form-section">
+    <h2>Szobafoglalás</h2>
+    <form id="bookingForm">
+        <input type="text" placeholder="Név" required>
+        <input type="email" placeholder="Email" required>
+        <select required>
+            <option value="">Szoba típusa</option>
+            <option>Standard</option>
+            <option>Deluxe</option>
+            <option>Suite</option>
+        </select>
+        <input type="date" required>
+        <button>Foglalás</button>
+    </form>
+    <p id="result"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
