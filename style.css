@@ -1,11 +1,38 @@
+@font-face {
+  font-family: Lato; /* set name */
+  src: url(fonts/Lato-Regular.ttf); /* url of the font */
+}
+
+@font-face {
+  font-family: Lora; /* set name */
+  src: url(fonts/Lora-VariableFont_wght.ttf); /* url of the font */
+}
+
+@font-face {
+    font-family: pfd;
+    src: url(fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
 * {
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Lato
 }
 
 body {
     margin: 0;
-    background: #f2f2f2;
+    background: #f4f0e3;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+hr {
+    border: 2px solid #A27B5B;
 }
 
 .navbar {
@@ -31,12 +58,28 @@ body {
 
 .hero {
     height: 60vh;
-    background: url("https://picsum.photos/1600/800") center/cover;
+    background: url("images/coverimg.png") center/cover;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 40px;
+    font-family: pfd
+}
+
+.hero h1 {
+    font-family: pfd;
+    font-size: 45px;
+    text-shadow: 5px 3px 2px #A27B5B;
+}
+
+.hero p{
+    font-size: 20px;
+    font-family: Lato;
+    padding: 0.3rem;
+    font-weight: 800;
 }
 
 .btn {
@@ -46,12 +89,18 @@ body {
     width: fit-content;
     text-decoration: none;
     margin-top: 10px;
+    border-radius: 0.5rem;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     gap: 20px;
+}
+
+.grid p{
+    font-family: Lora;
+    font-weight: 700;
 }
 
 .card {
@@ -77,7 +126,75 @@ input, select, button {
 }
 
 #logbutton {
-    background-color: #0f00aa;
+    background-color: #C89B6A;
     padding: 0.4rem;
     border-radius: 5%
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 50% 50%;
+}
+
+.images {
+    height: 25rem;
+    width: 25rem;
+    margin-left: 4rem;
+    border-radius: 1rem;
+}
+
+.div2 {
+    margin-right: 5rem;
+}
+
+.marquee {
+      background: #e4daba;
+      color: #A27B5B;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 10s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+
+.card, .room, .container {
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .room:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+button, .btn, #logbutton {
+    background-color: #C89B6A;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #B88A44;
+    transform: scale(1.05);
 }
