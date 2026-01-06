@@ -27,6 +27,25 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
         return;
     }
 
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    if (users.find(u => u.email === email)) {
+        error.textContent = "Ez az email már regisztrálva van!";
+        return;
+    }
+
+    users.push({
+        name,
+        email,
+        password: pass1
+    });
+
+    localStorage.setItem("users", JSON.stringify(users));
+
     error.style.color = "green";
-    error.textContent = "Sikeres regisztráció (demo)";
+    error.textContent = "Sikeres regisztráció! Átirányítás...";
+
+    setTimeout(() => {
+        window.location.href = "login.html";
+    }, 1500);
 });
