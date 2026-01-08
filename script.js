@@ -1,13 +1,20 @@
 
-window.addEventListener("scroll", () => {
-    const nav = document.querySelector(".navbar");
-    if (window.scrollY > 10) {
-        nav.style.boxShadow = "0 2px 10px rgba(0,0,0,0.4)";
-    } else {
-        nav.style.boxShadow = "none";
-    }
-});
+let lastScroll = 0;
+const navbar = document.querySelector(".navbar");
 
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        // lefelé scroll → eltűnik
+        navbar.classList.add("hide");
+    } else {
+        // felfelé scroll → megjelenik
+        navbar.classList.remove("hide");
+    }
+
+    lastScroll = currentScroll;
+});
 let slideIndex = 1;
 showSlides(slideIndex);
 
