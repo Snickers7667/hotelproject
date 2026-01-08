@@ -392,3 +392,112 @@ img {vertical-align: middle;}
     padding: 0px 0px 0px 189px;       
     width: 100%;
 }
+
+/* =========================
+   RESPONSIVE – MOBIL / TABLET
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+  }
+
+  /* HERO */
+  .hero {
+    height: auto;
+    padding: 25px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* INFO GRID */
+  .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* IMAGE + TEXT CONTAINER */
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .images {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .div2 {
+    margin-right: 0;
+  }
+
+  /* PADDINGEK */
+  .form-section,
+  .contact,
+  .rooms,
+  .info {
+    padding: 20px;
+  }
+
+  /* MARQUEE */
+  .marquee {
+    font-size: 1rem;
+  }
+
+  /* SLIDER */
+  .slider,
+  .slideshow-container {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .prev,
+  .next {
+    font-size: 18px;
+    padding: 10px;
+  }
+}
+
+/* EXTRA KIS KÉPERNYŐ */
+@media (max-width: 480px) {
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 13px;
+  }
+
+  .btn,
+  button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+}
