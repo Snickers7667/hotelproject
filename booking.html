@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Foglalás</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/pslogosmall.png">
 </head>
 <body>
 
 <header class="navbar">
-    <div class="logo">PRISM STAYS</div>
+    <div class="logo"><img src="images/pslogo.png" alt="" class="logo"></div>
     <nav>
-        <a href="index.html">Főoldal</a>
-        <a href="rooms.html">Szobák</a>
-        <a href="booking.html">Foglalás</a>
-        <a href="contact.html">Kapcsolat</a>
+        <a href="index.html" class="navbuttons">Főoldal</a>
+        <a href="rooms.html" class="navbuttons">Szobák</a>
+        <a href="booking.html" class="navbuttons">Foglalás</a>
         <a href="login.html" id="logbutton">Bejelentkezés</a>
     </nav>
 </header>
@@ -72,12 +73,31 @@
     <p id="result"></p>
 </section>
 
-<section class="contact">
-    <h2>Kapcsolat</h2>
-    <p>📧 info@prysmhotel.hu</p>
-    <p>📞 +36 30 123 4567</p>
-</section>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-logo">Our Contacts</div>
 
+        <div class="footer-nav">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <div class="main-links">
+                <a href="#">+36 70 725 1163</a>
+                <a href="#">info@prysmhotel.hu</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>Copyright &copy; 2026 Lobotomy Corp.</span>
+            <span class="separator">·</span>
+            <a href="">Terms</a>
+            <span class="separator">·</span>
+            <a href="https://commission.europa.eu/privacy-policy-websites-managed-european-commission_en">Privacy</a>
+            <span class="separator">·</span>
+            <a href="https://commission.europa.eu/cookies-policy_en">Cookies</a>
+        </div>
+    </div>
 <script src="script.js"></script>
 </body>
 </html>

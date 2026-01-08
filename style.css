@@ -55,10 +55,17 @@ hr {
     margin-left: 20px;
     text-decoration: none;
 }
+.whyprism {
+  text-align: center;
+  background-color: #f0ebd9;
+  padding: 0.2rem;
+  border-radius: 1rem;
+}
+
 
 .hero {
     height: 60vh;
-    background: url("images/coverimg.png") center/cover;
+
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     color: white;
@@ -66,7 +73,12 @@ hr {
     flex-direction: column;
     justify-content: center;
     padding: 40px;
-    font-family: pfd
+    font-family: pfd;
+        background:
+    linear-gradient(
+    to top,
+    rgb(0 0 0 / 0.8), rgb(0 0 0 / 0.2 )
+  ), url("images/coverimg.png") center/cover;
 }
 
 .hero h1 {
@@ -122,21 +134,15 @@ input, select, button {
     width: 100%;
     max-width: 300px;
 }
-
 .logo {
-    margin-left: 2rem;
+    height: 10%;
+    width: 30%;
 }
 
 #logbutton {
     background-color: #C89B6A;
     padding: 0.4rem;
     border-radius: 5%
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: 50% 50%;
 }
 
 .images {
@@ -146,8 +152,13 @@ input, select, button {
     border-radius: 1rem;
 }
 
+.div1 {
+  background-color: #f8f6ee;
+}
+
 .div2 {
     margin-right: 5rem;
+    background-color: #f8f6ee;
 }
 
 .marquee {
@@ -324,6 +335,13 @@ img {vertical-align: middle;}
   animation-duration: 1.5s;
 }
 
+.container {
+  background-color: #f8f6ee;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 50% 50%;
+}
+
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
@@ -393,11 +411,18 @@ img {vertical-align: middle;}
     width: 100%;
 }
 
+
 /* =========================
    RESPONSIVE – MOBIL / TABLET
    ========================= */
 
 @media (max-width: 768px) {
+
+  /* LOGO */
+  .logo {
+    width: 60%;
+    height: 50%;
+  }
 
   /* NAVBAR */
   .navbar {
@@ -483,6 +508,11 @@ img {vertical-align: middle;}
 /* EXTRA KIS KÉPERNYŐ */
 @media (max-width: 480px) {
 
+  .logo {
+    width: 50%;
+    height: 50%;
+  }
+
   h2 {
     font-size: 26px;
   }
@@ -508,4 +538,100 @@ img {vertical-align: middle;}
 
 .navbar.hide {
   transform: translateY(-100%);
+}
+
+
+.navbuttons {
+  font-size: 20px;
+}
+
+.site-footer {
+    background:
+    linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 0), rgb(0 0 0 / 0.2 )
+  ), url(images/sad);
+border-bottom-left-radius: 1rem;
+border-bottom-right-radius: 1rem;
+padding: 40px 20px;
+color: #555;
+text-align: left;
+            
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 30px;
+    font-weight: 800;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Top Row: Socials and Main Links */
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+}
+
+.social-icons a {
+    color: #777;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.social-icons a:hover {
+    color: #333;
+}
+
+.main-links {
+    display: flex;
+    gap: 20px;
+}
+
+.main-links a {
+    text-decoration: none;
+    color: #777;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+.footer-bottom {
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom a {
+    color: #777;
+    text-decoration: underline;
+}
+
+.footer-bottom span.separator {
+    color: #A27B5B;
+    margin: 0 2px;
+}
+
+.footer-bottom a:hover {
+    color: #333;
 }
