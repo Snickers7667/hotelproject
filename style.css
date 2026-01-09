@@ -406,10 +406,10 @@ img {vertical-align: middle;}
 
 
 .dots-container {
-    text-align: center; 
-    padding: 0px 0px 0px 189px;       
-    width: 100%;
+  padding: 15px 0;
+  text-align: center;
 }
+
 
 
 /* =========================
@@ -634,4 +634,36 @@ text-align: left;
 
 .footer-bottom a:hover {
     color: #333;
+}
+
+.no_underline{
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .booking-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  #bookingForm {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.slideshow-wrapper {
+  width: 100%;
+}
+
+.slideshow-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+
+html, body {
+  height: 100%;
 }
